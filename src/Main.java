@@ -3,8 +3,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        char[] message = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'};
-        int key = 3;
+        Scanner in = new Scanner(System.in);
+        String str = in.nextLine();
+        char[] message = str.toCharArray();
+
+
+        int key = in.nextInt();
 
         char[] encrypted = encrypt(message, key);
         System.out.println("Зашифрованное сообщение: " + new String (encrypted));
@@ -16,7 +20,7 @@ public class Main {
             if (Character.isLetter(message[i])) {
                 int originalIndex = message[i] ;
                 int shiftedIndex = (originalIndex + key);
-                encrypted[i] = (char) ( shiftedIndex);//dsugudksvfgusdfvgsudyvfgsudgvszduvgsdzlyvg
+                encrypted[i] = (char) ( shiftedIndex);
             } else {
                 encrypted[i] = message[i];
             }
