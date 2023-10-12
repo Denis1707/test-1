@@ -16,7 +16,7 @@ public class Main {
             if (Character.isLetter(message[i])) {
                 int originalIndex = message[i] ;
                 int shiftedIndex = (originalIndex + key);
-                encrypted[i] = (char) ( shiftedIndex);
+                encrypted[i] = (char) ( shiftedIndex);//dsugudksvfgusdfvgsudyvfgsudgvszduvgsdzlyvg
             } else {
                 encrypted[i] = message[i];
             }
